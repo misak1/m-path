@@ -1,7 +1,7 @@
 {
-  "name": "template",
+  "name": "m-path",
   "version": "0.0.1",
-  "description": "説明.",
+  "description": "path utility",
   "main": "index.js",
   "engines": {
     "node": "~>0.10.x",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/misak1/template.git"
+    "url": "https://github.com/misak1/m-path.git"
   },
   "scripts": {
     "examples": "node ./example.js",
     "test": "mocha --ui tdd ./tests/",
-    "doc": "php README.php | sed -e 's/NPM_PACKAGE_NAME/template/g' >  README.md "
+    "doc": "php README.php | sed -e 's/NPM_PACKAGE_NAME/m-path/g' >  README.md "
   },
   "author": {
     "name": "Misaki Shibata",
@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/misak1/template/issues"
+    "url": "https://github.com/misak1/m-path/issues"
   },
   "dependencies": {
     "m-util": "*"
@@ -33,6 +33,6 @@
     "mocha": "^2.3.3"
   },
   "keywords": [
-    "キーワード"
+    "path"
   ]
 }
