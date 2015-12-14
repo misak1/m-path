@@ -11,6 +11,11 @@ before_script:
 script:
   - npm test
 
+os:
+  - linux
+  - osx
+  - windows
+
 notifications:
   emails:
     - misaki.pink@gmail.com
