@@ -4,7 +4,7 @@ node_js:
   - "0.10"
 
 before_install:
-  - echo '$TRAVIS_OS_NAME'$TRAVIS_OS_NAME
+  - echo $TRAVIS_OS_NAME
   - if [ $TRAVIS_OS_NAME == "osx" ]; then
     - rm -rf ~/.nvm
     - git clone https://github.com/creationix/nvm.git ~/.nvm
