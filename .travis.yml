@@ -5,14 +5,14 @@ node_js:
 
 before_install:
   - echo $TRAVIS_OS_NAME
-  - if [ $TRAVIS_OS_NAME == "osx" ]; then
-    - rm -rf ~/.nvm
-    - git clone https://github.com/creationix/nvm.git ~/.nvm
-    - source ~/.nvm/nvm.sh
-    - nvm install $NODE_VERSION
-    - node --version
-    - npm install
-  - fi
+  - echo NODE_VERSION
+  - if [ $TRAVIS_OS_NAME == "osx" ]; then rm -rf ~/.nvm fi
+  - if [ $TRAVIS_OS_NAME == "osx" ]; then git clone https://github.com/creationix/nvm.git ~/.nvm fi
+  - if [ $TRAVIS_OS_NAME == "osx" ]; then source ~/.nvm/nvm.sh fi
+  - if [ $TRAVIS_OS_NAME == "osx" ]; then nvm install $NODE_VERSION fi
+  - if [ $TRAVIS_OS_NAME == "osx" ]; then node --version fi
+  - if [ $TRAVIS_OS_NAME == "osx" ]; then npm install fi
+
 before_script:
   - npm install
 
