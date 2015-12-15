@@ -31,23 +31,23 @@ if(m_path.isWindows()){
 			assert.deepEqual(m_path.pathJoin(['index.html']), 'index.html');
 		});
 		test('pathJoin#2', function() {
-			assert.deepEqual(m_path.pathJoin(['.', 'index.html']), '.¥index.html');
+			assert.deepEqual(m_path.pathJoin(['.', 'index.html']), '.¥¥index.html');
 		});
 		test('pathJoin#3', function() {
-			assert.deepEqual(m_path.pathJoin(['test1','index.html']), 'test1¥index.html');
+			assert.deepEqual(m_path.pathJoin(['test1','index.html']), 'test1¥¥index.html');
 		});
 		test('pathJoin#4', function() {
-			assert.deepEqual(m_path.pathJoin(['', 'test2','index.html']), '¥test2¥index.html');
+			assert.deepEqual(m_path.pathJoin(['', 'test2','index.html']), '¥¥test2¥¥index.html');
 			// 単純結合なので、'¥'から始まる場合はから要素がないとダメ。
 		});
 		test('pathJoin#5', function() {
-			assert.deepEqual(m_path.pathJoin(['.','test3','index.html']), '.¥test3¥index.html');
+			assert.deepEqual(m_path.pathJoin(['.','test3','index.html']), '.¥¥test3¥¥index.html');
 		});
 		test('pathJoin#6', function() {
-			assert.deepEqual(m_path.pathJoin(['test4','test4','index.html']), 'test4¥test4¥index.html');
+			assert.deepEqual(m_path.pathJoin(['test4','test4','index.html']), 'test4¥¥test4¥¥index.html');
 		});
 		test('pathJoin#7', function() {
-			assert.deepEqual(m_path.pathJoin(['', 'test5','test5','index.html']), '¥test5¥test5¥index.html');
+			assert.deepEqual(m_path.pathJoin(['', 'test5','test5','index.html']), '¥¥test5¥¥test5¥¥index.html');
 			// 単純結合なので、"/"から始まる場合はから要素がないとダメ。
 		});
 	});
