@@ -21,8 +21,6 @@ script:
 
 os:
   - linux
-  - osx
-  - windows
 
 notifications:
   emails:
