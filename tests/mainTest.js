@@ -2,6 +2,7 @@ var assert = require('assert');
 var m_path = require(__dirname+'/../index.js');
 
 if(m_path.isWindows()){
+	// for Windows
 	suite('pathSplit', function() {
 		test('pathSplit#1', function() {
 			assert.deepEqual(m_path.pathSplit('index.html'), ['index.html']);
@@ -52,6 +53,7 @@ if(m_path.isWindows()){
 		});
 	});
 }else{
+	// for Mac/Linux
 	suite('pathSplit', function() {
 		test('pathSplit#1', function() {
 			assert.deepEqual(m_path.pathSplit('index.html'), ['index.html']);
